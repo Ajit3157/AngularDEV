@@ -1,0 +1,17 @@
+<p>reactive-forms works!</p>
+<form action="" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <label  for="name" name="name" >{{"Name" | testPipe}}</label>
+    <input type="text" name="name" formControlName="name" id="name">
+    <input type="email" name="email" formControlName="email" id="email">
+    <button type="submit" [disabled]="!registerForm.valid">Submit</button>
+
+    <p appHighlight>hi this is paragraph</p>
+
+</form>
+
+<div [ngSwitch]="color">
+    <p *ngSwitchCase="'red'"></p>
+    <p *ngSwitchCas="'yellow'"e></p>
+    <button [ngStyle]="{'background-color' : 'blue'}">NGSTYLE</button>
+
+</div>
